@@ -8,9 +8,28 @@ const CartItem = ({ onContinueShopping }) => {
   const dispatch = useDispatch();
 
   // Calculate total amount for all products in the cart
-  const calculateTotalAmount = () => {
- 
-  };
+const calculateTotalAmount = () => {
+    // Sample item array
+    const items = [
+    { type: 'Rose', quantity: 10, cost: 2.5 },
+    { type: 'Tulip', quantity: 5, cost: 1.5 },
+    { type: 'Daisy', quantity: 20, cost: 1.0 }
+    ];
+
+    // Function to calculate total cost
+    function calculateTotalCost(items) {
+    let totalCost = 0;
+    items.forEach(item => {
+        const itemTotal = item.quantity * item.cost;
+        totalCost += itemTotal;
+    });
+    return totalCost;
+    }
+
+    // Calculate and log the total cost
+    const totalCost = calculateTotalCost(items);
+    console.log('Total cost:', totalCost);
+};
 
   const handleContinueShopping = (e) => {
    
