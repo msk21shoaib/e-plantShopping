@@ -42,4 +42,6 @@ export const selectTotalItems = state => state.cart.totalItems;
 
 export const { addItem, removeItem, updateQuantity } = CreatSlice.actions;
 
-export default CreatSlice.reducer;
+export default CreatSlice.reducer;         //reducer export
+
+//Using action.payload is a convenient way to pass data along with the action, allowing the reducer to use this data to update the state.
